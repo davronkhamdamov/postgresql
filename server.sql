@@ -28,18 +28,11 @@ CREATE TABLE users(
     country VARCHAR (10) NOT NULL
 );
 -- 
-INSERT INTO users(car_id, car_title, car_price, cars_brand, car_color,created_by_user_id)
+INSERT INTO users(car_id, car_title, car_price, cars_brand, car_color, created_by_user_id)
       VALUES('1','BMW','30000','BMW','white','1');
 
-INSERT INTO users(user_id,
-user_name,
-user_surname,
-user_age,
-user_email,
-user_role,
-user_password)
+INSERT INTO users(user_id, user_name, user_surname, user_age, user_email, user_role,user_password)
       VALUES('1','John','Doe',12,'john@gmail.com','admin','123456');
-
 
 --
 
@@ -50,6 +43,7 @@ CREATE TABLE animals(
     animal_color VARCHAR (50) not NULL,
     created_by_user_id VARCHAR (50) not NULL
 );
+
 -- 
 
 INSERT INTO animals(animal_id,
@@ -69,3 +63,46 @@ CREATE TABLE COURSE_DB(
     course_description VARCHAR (50) NOT NULL,
     created_by_user_id VARCHAR (50) NOT NULL
 );
+
+INSERT INTO animals(animal_id,
+animal_title,
+animal_type,
+animal_color,
+created_by_user_id)
+      VALUES('1','cat','cat','white','1');
+
+-- 
+
+CREATE TABLE TEACHERS(
+    teacher_id VARCHAR (50) UNIQUE NOT NULL,
+    teacher_name  VARCHAR (50) NOT NULL,
+    teacher_surname VARCHAR (50) NOT NULL,
+    teacher_age INTEGER NOT NULL,
+    teacher_course_title VARCHAR (50) NOT NULL,
+    created_by_user_id VARCHAR (50) NOT NULL
+);
+
+INSERT INTO animals(animal_id,
+animal_title,
+animal_type,
+animal_color,
+created_by_user_id)
+      VALUES('1','cat','cat','white','1');
+
+-- 
+
+CREATE TABLE FRUITS(
+    fruit_id VARCHAR (50) UNIQUE NOT NULL,
+    fruit_title VARCHAR (50) NOT NULL,
+    fruit_type VARCHAR (50) NOT NULL,
+    fruit_price INTEGER NOT NULL,
+    created_by_user_id VARCHAR (50) NOT NULL,
+);
+-- 
+INSERT INTO FRUITS(
+    fruit_id,
+    fruit_title,
+    fruit_type,
+    fruit_price,
+    created_by_user_id)
+      VALUES('1','apple','fruit','1000','1');
